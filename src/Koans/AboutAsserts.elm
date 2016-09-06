@@ -8,9 +8,9 @@ import TestHelpers exposing (..)
 testSuite =
     describe "About Expects"
         [ test "assert tests for a true value" <|
-            \() -> Expect.true "Should be True" xBool
+            \() -> Expect.true "Should be True" True
         , test "assertEqual tests for equality" <|
-            \() -> Expect.equal True xBool
+            \() -> Expect.equal True True
         , test "assertNotEqual tests for inequality" <|
-            \() -> Expect.notEqual False xBool
+            \() -> Expect.notEqual False True
         ]

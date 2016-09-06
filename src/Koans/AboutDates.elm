@@ -34,21 +34,21 @@ getField fn date =
 testSuite =
     describe "About Dates"
         [ test "year gets the year" <|
-            \() -> Expect.equal (Date.year ourDate) xNum
+            \() -> Expect.equal (Date.year ourDate) 1970
         , test "month gets the month"
           -- a type!
           <|
-            \() -> Expect.equal (Date.month ourDate) xMonth
+            \() -> Expect.equal (Date.month ourDate) Date.Jan
         , test "day gets the day" <|
-            \() -> Expect.equal (Date.day ourDate) xNum
+            \() -> Expect.equal (Date.day ourDate) 1
         , test "dayOfWeek gets the day of the week"
           -- another type
           <|
-            \() -> Expect.equal (Date.dayOfWeek ourDate) xDay
+            \() -> Expect.equal (Date.dayOfWeek ourDate) Date.Thu
         , test "hour gets the hour" <|
-            \() -> Expect.equal (getField Date.hour parsedDate) xString
+            \() -> Expect.equal (getField Date.hour parsedDate) "11"
         , test "minute gets the minute" <|
-            \() -> Expect.equal (getField Date.minute parsedDate) xString
+            \() -> Expect.equal (getField Date.minute parsedDate) "30"
         , test "second gets the second" <|
-            \() -> Expect.equal (getField Date.second parsedDate) xString
+            \() -> Expect.equal (getField Date.second parsedDate) "45"
         ]
